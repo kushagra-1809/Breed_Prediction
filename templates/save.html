@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <form method="POST" action="{{ url_for('save') }}">
+      <input type="hidden" name="tagid" value="{{ tagid }}">
+      <input type="hidden" name="photo" value="{{ photo }}">
+
+      <p>Tag ID: <b>{{ tagid }}</b></p>
+      <img src="{{ url_for('static', filename='uploads/' ~ photo) }}" style="max-height:200px;"><br><br>
+
+      <label>Breed</label><br>
+      <input type="text" name="breed" value="{{ breed }}"><br>
+<small>confidence: {{ confidence }}</small>
+      <label>Accession No.</label><br>
+      <input type="text" name="acc_no" value = "{{ acc_no }}"><br>
+
+      <label>Cross Breed</label><br>
+      <input type="text" name="cross_breed" value=""><br><br>
+
+      <label>Owner Name</label><br>
+      <input type="text" name="owner_name" ><br>
+
+      <label>Contact</label><br>
+      <input type="text" name="contact"><br>
+
+      <label>Address</label><br>
+      <input type="text" name="address"><br>
+
+      <label>Age</label><br>
+      <input type="number" name="age"><br>
+
+      <label>Vaccination Details</label><br>
+      <input type="text" name="vacc"><br>
+
+      <label>Calvings</label><br>
+      <input type="text" name="calvings"><br>
+
+      <label>AI Details</label><br>
+      <input type="text" name="ai"><br>
+
+      <label>Pregnancy Details</label><br>
+      <input type="text" name="pd"><br><br>
+
+      <button type="submit">Save</button>
+    </form>
+</body>
+</html>

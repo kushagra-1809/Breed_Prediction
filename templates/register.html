@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Register Cattle</title>
+</head>
+<style>
+  body.dark{
+    --bg: #0f1724
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    max-width: auto;
+    background-color: var(--bg);
+    border-radius: 10px;
+}
+.nav{
+    height: 70px;
+
+    width: 100%;
+    background-color: #FFEDBB;
+
+}
+#head{
+    position : relative;
+    text-align: center;
+    top: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+#logo{
+    position : absolute;
+width: 65px;
+height: 65px;
+top: 5px ;
+}
+#user{
+    position : absolute;
+width: 45px;
+height: 45px;
+top: 10px ;
+left: 1470px ;
+}
+#lang{
+    position: absolute;
+    left: 1400px;
+     
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;}
+
+    .cards img{
+        margin-top: 20px;
+        width: 250px;
+        height: 250px;
+    }
+    #reg{
+        margin-left: 80px;
+
+    }
+    #sc{
+        margin-left: 50px;
+   
+    }
+     button{
+        position: relative;
+    width: 250px;
+    height: 60px;
+    top: 370px;
+    left: 50px;
+    background-color: #FFEDBB;
+    border-radius: 10px;
+    font-style: normal;
+font-weight:bold;
+font-size: large;
+   }
+    
+#register{
+  position: relative;
+  text-align: center;
+  top: 80px;
+}
+.register{
+  
+  position: relative;
+  
+  top: 100px;
+  width: 500px;
+  height: 700px;
+  margin-left: 515px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+form{
+  margin-top: 120px;
+  margin-left: 50px;
+}
+form p{
+  color: grey;
+  font-weight: bold;
+  font-size: large;
+}
+ label{
+ position: relative;
+ top: 50px;
+}
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+<body>
+
+  <div class="nav">
+    <div class="logo">
+<h2 id="head"> PashuScan </h2>
+<img id="logo" src="static/landing-page-logo.png" alt="" srcset="">
+<img id="user" src="static/user.png" alt="" srcset="">
+<h3 id="lang">EN |</h3>
+    </div>
+    </div>
+
+    <div class="register">
+      <h1 id="register">Register Cattle</h1>
+
+<form method="POST" action="{{ url_for('register') }}" enctype="multipart/form-data">
+  <p>Tag ID: <b>{{ tagid }}</b></p>
+  <label>Image for prediction</label><br>
+  <input type="file" name="image" accept="image/*" required><br><br>
+  <button type="submit">Upload & Predict</button>
+</form>
+    </div>
+
+   
+
+ 
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/main.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <div class="nav">
+        <div class="logo">
+<h2 id="head"> PashuScan </h2>
+<img id="logo" src="static/landing-page-logo.png" alt="" srcset="">
+<img id="user" src="static/user.png" alt="" srcset="">
+<h3 id="lang">EN |</h3>
+        
+        <div class="cards">
+    <div class="register">
+        <button onclick= gotopg()>REGISTER</button>
+        <img id="reg" src="static/notes.png" alt="" class="src" width="50px" height="50px">
+     <p id="tg1">Be a part of change</p>
+    </div>
+<div class="scan">
+        <button onclick= gotopg2()>SCAN</button>
+    
+        <img id="sc" src="static/qr-code.png" alt="" class="src" width="50px" height="50px">
+        <p id="tg2">Instant results</p>
+    
+</div>
+</div>
+    </div>
+</div>    
+<script>
+    function gotopg() {window.location.href="{{ url_for('register') }}";}
+    function gotopg2() {window.location.href="{{ url_for('scan') }}";}
+</script>
+</body>
+</html>
